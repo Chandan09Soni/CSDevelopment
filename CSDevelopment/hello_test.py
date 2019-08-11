@@ -1,17 +1,23 @@
+#!/usr/bin/python3
+import sys
+import boto3
 class HelloTest:
+    """asdkfjl"""
     def __init__(self):
-        print('Hello class instatiation.')
+        """This is the intialization"""
+        print('This is initializatoin function')
 
     def loader(self):
-        print('loader function')
+        """This is a main entry point of class"""
+        print(' loader function ')
+        print(sys.version)
         words = ['chandu', 'kumar', 'soni', 'chandan']
         for word in words[:]:
             if len(word) > 6:
                 words.insert(0, word)
-        print('Index\tContent')
-        for index in range(len(words)):
-            print(index, '\t', words[index])
-
+        print('Index \t Content')
+        for index, word in enumerate(words):
+            print(str(index) +'\t'+ word)
 
 if __name__ == '__main__':
     HelloTest().loader()
